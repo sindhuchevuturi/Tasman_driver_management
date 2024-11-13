@@ -73,13 +73,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4444",  # Add your frontend URL here
 ]
 ROOT_URLCONF = 'backend.urls'
-BASE_DIR = Path(__file__).resolve().parent.parent.parent # Adjust this line if your structure is different
+# BASE_DIR = Path(__file__).resolve().parent.parent.parent # Adjust this line if your structure is different
 import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [            os.path.join(BASE_DIR, 'frontend', 'tdr')],  # Adjust path as needed],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'tdr')],  # Path to your template directory
+        'APP_DIRS': True,  # Allow app-specific template directories
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
