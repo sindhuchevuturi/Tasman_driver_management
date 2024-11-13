@@ -362,7 +362,7 @@ function addJob() {
     let newJobCount = parseInt(document.getElementById('newJobCount').value.trim());
     let newJobDate = document.getElementById('newJobDate').value; 
     const newTrailerType = document.getElementById('newTrailerType').value;
-    const dateObj = new Date(newJobCount);
+    const dateObj = new Date(newJobDate);
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
     let formattedDate = new Intl.DateTimeFormat('en-US', options).format(dateObj);
 
