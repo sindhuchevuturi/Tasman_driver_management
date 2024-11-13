@@ -347,6 +347,16 @@ table {
 function validateJobCount(input) {
     input.value = input.value.replace(/\D/g, ''); // Allow only digits
 }
+
+window.onload = function() {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    
+    document.getElementById("newJobDate").value = today;
+}
 function addJob() {
     const newJob = document.getElementById('newJob').value.trim();
     let newJobCount = parseInt(document.getElementById('newJobCount').value.trim());
@@ -479,7 +489,7 @@ function confirmJob(button) {
         } else if (trailerType === 'RT') {
             trailerRegoSelect.disabled = false;
             trailerRego2Select.disabled = false;
-            trailerRego3Select.disabled = true;
+            trailerRego3Select.disabled = false;
         } else if (trailerType === 'S' || trailerType === 'SDL') {
             trailerRegoSelect.disabled = false;
             trailerRego2Select.disabled = true;
