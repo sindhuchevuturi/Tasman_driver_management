@@ -38,7 +38,7 @@ SECRET_KEY = 'django-insecure-1(e*rs)z4)%3btrpr4r0(62b^gf@@q3rd(#q*!v8^zo-k0%=76
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tasman-driver-management-3f95ed8c89cb.herokuapp.com']
 
 
 # Application definition
