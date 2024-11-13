@@ -34,6 +34,10 @@ YOUR_TWILIO_PHONE_NUMBER = os.getenv('YOUR_TWILIO_PHONE_NUMBER')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-1(e*rs)z4)%3btrpr4r0(62b^gf@@q3rd(#q*!v8^zo-k0%=76'
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -52,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'corsheaders',
+    'django.contrib.staticfiles',
 
 ]
 
